@@ -240,8 +240,7 @@
         <li class="list-group-item">
           <span class="d-inline">Copy number profile</span>
           <span class="d-inline ms-3">
-            {% set sample_ids = case.individual_ids|join(',') %}
-            <a class="btn btn-secondary" target="_blank" href="http://{{gens_info.host}}/app/viewer/{{case._id}}?sample_ids={{sample_ids}}&region={{variant.chromosome}}:{{variant.position - 2000}}-{{variant.end + 2000}}&variant={{variant._id}}&genome_build={{gens_info.genome_build}}">Gens CN profile</a>
+            <a class="btn btn-secondary" target="_blank" href="http://{{gens_info.host}}/app/viewer/{{case._id}}?region={{variant.chromosome}}:{{variant.position - 2000}}-{{variant.end + 2000}}&variant={{variant._id}}&genome_build={{gens_info.genome_build}}">Gens CN profile</a>
           </span>
         </li>
         {% endif %}
